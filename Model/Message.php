@@ -8,7 +8,7 @@ class Message
     private $name;
     private $date;
 
-    public function __construct($title, $message, $name, $date)
+    public function __construct(string $title, string $message, string $name, string $date)
     {
         $this->title = $this->test_input($title);
         $this->message = $this->test_input($message);

@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </div>
 <?php
-function whatIsHappening()
+/*function whatIsHappening()
 {
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
@@ -60,5 +60,5 @@ function whatIsHappening()
     var_dump($_SESSION);
 }
 
-whatIsHappening(); ?>
+whatIsHappening();*/ ?>
 </body>

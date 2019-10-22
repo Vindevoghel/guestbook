@@ -38,7 +38,6 @@ class HomeController
 
         if (isset($title) && isset($message) && isset($name) && isset($date)) {
             $guestBookMessage = new Message($title, $message, $name, $date);
-            var_dump($guestBookMessage);
             $guestBookMessage->addToJson();
         }
     }
