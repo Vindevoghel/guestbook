@@ -9,13 +9,15 @@ session_start();
 require 'Model/Message.php';
 require 'Model/GuestBook.php';
 require 'Controller/HomeController.php';
+
+
 $controller = new HomeController();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $controller->formChecker();
-    $controller->render();
-} else {
-    $controller->render();
 }
+$controller->render();
+
 
 ?>
 

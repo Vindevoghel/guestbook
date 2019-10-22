@@ -27,7 +27,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 
 <div>
-    <?php for($i=0; $i<20; $i++):
+    <?php
+
+    if (count($allMessages) <20){
+        $loopLength = count($allMessages);
+    } else {
+        $loopLength = 20;
+    }
+
+    for($i=0; $i<$loopLength; $i++):
     //foreach ($allMessages as $message):
 
     ?>
