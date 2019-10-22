@@ -46,22 +46,22 @@ class Message
     }
 
 
-    public function getTitle() :string
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function getMessage() :string
+    public function getMessage(): string
     {
         return $this->message;
     }
 
-    public function getName() :string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getDate() :string
+    public function getDate(): string
     {
         return $this->date;
     }

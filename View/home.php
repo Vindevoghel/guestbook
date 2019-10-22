@@ -29,23 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div>
     <?php
 
-    if (count($allMessages) <20){
+    if (count($allMessages) < 20) {
         $loopLength = count($allMessages);
     } else {
         $loopLength = 20;
     }
 
-    for($i=0; $i<$loopLength; $i++):
-    //foreach ($allMessages as $message):
+    for ($i = 0; $i < $loopLength; $i++): ?>
+        <div>
+            <h3><?php echo $allMessages[$i]->getTitle() ?></h3>
+            <h4><?php echo $allMessages[$i]->getName() ?></h4>
+            <p><?php echo $allMessages[$i]->getMessage() ?></p>
+            <p><?php echo $allMessages[$i]->getDate() ?></p>
 
-    ?>
-    <div>
-        <h3><?php echo $allMessages[$i]->getTitle() ?></h3>
-        <h4><?php echo $allMessages[$i]->getName() ?></h4>
-        <p><?php echo $allMessages[$i]->getMessage() ?></p>
-        <p><?php echo $allMessages[$i]->getDate() ?></p>
-
-    </div>
+        </div>
 
     <?php endfor; ?>
 
