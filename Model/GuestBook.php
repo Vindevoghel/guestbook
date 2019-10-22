@@ -13,10 +13,8 @@ class GuestBook
                 array_push($this->posts, new Message($postsJson['title'], $postsJson['message'],
                     $postsJson['name'], $postsJson['date']));
             }
-
-
-            return $this->posts;
         }
+        return array_reverse($this->posts);
     }
 
 

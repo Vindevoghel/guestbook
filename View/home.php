@@ -27,16 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 
 <div>
-    <?php foreach ($allMessages as $message): ?>
-        <div>
-            <h3><?php echo $message->getTitle() ?></h3>
-            <h4><?php echo $message->getName() ?></h4>
-            <p><?php echo $message->getMessage() ?></p>
-            <p><?php echo $message->getDate() ?></p>
+    <?php for($i=0; $i<20; $i++):
+    //foreach ($allMessages as $message):
 
-        </div>
+    ?>
+    <div>
+        <h3><?php echo $allMessages[$i]->getTitle() ?></h3>
+        <h4><?php echo $allMessages[$i]->getName() ?></h4>
+        <p><?php echo $allMessages[$i]->getMessage() ?></p>
+        <p><?php echo $allMessages[$i]->getDate() ?></p>
 
-    <?php endforeach; ?>
+    </div>
+
+    <?php endfor; ?>
 
 </div>
 <?php
